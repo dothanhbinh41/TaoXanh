@@ -41,9 +41,9 @@ namespace TaoxanhProxy
             proxyServer.EnableHttp2 = true;
             proxyServer.ServerCertificateValidationCallback += ProxyServer_ServerCertificateValidationCallback;
             // generate root certificate without storing it in file system
-            //proxyServer.CertificateManager.CreateRootCertificate(true);
-            //proxyServer.CertificateManager.TrustRootCertificate();
-            proxyServer.CertificateManager.RootCertificate = new X509Certificate2(Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "rootCert.pfx"), string.Empty, X509KeyStorageFlags.Exportable);
+            proxyServer.CertificateManager.CreateRootCertificate(true);
+            proxyServer.CertificateManager.TrustRootCertificate();
+          //  proxyServer.CertificateManager.RootCertificate = new X509Certificate2(Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "rootCert.pfx"), string.Empty, X509KeyStorageFlags.Exportable);
             proxyServer.CertificateManager.TrustRootCertificateAsAdmin();
 
             proxyServer.ExceptionFunc = async exception =>
