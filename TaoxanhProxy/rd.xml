@@ -1,0 +1,139 @@
+﻿<Directives>
+	<Application>
+
+		<Assembly Name="TaoxanhProxy" Dynamic="Required All" Serialize="Required All" >
+		</Assembly>
+		<!--<Assembly Name="AutoFarmer.Model" Dynamic="Required All" Serialize="Required All"/>-->
+		<Assembly Name="System" Dynamic="Required All" Serialize="Required All"/>
+		<Assembly Name="System.Reflection" Dynamic="Required All" Serialize="Required All"/>
+		<Assembly Name="System.Security" Dynamic="Required All" Serialize="Required All" />
+		<Assembly Name="System.Runtime" Dynamic="Required All" Serialize="Required All" />
+		<Assembly Name="System.Text.Json" Dynamic="Required All" Serialize="Required All" />
+		<!--<Assembly Name="PuppeteerSharp" Dynamic="Required All" Serialize="Required All" />-->
+		<Assembly Name="Titanium.Web.Proxy" Dynamic="Required All" Serialize="Required All" />
+		<Assembly Name="System.Security.Principal.Windows" Dynamic="Required All" Serialize="Required All" />
+		<Assembly Name="BrotliSharpLib" Dynamic="Required All" Serialize="Required All" />
+
+		<Assembly Name="System.Private.CoreLib"  Dynamic="Required All" Serialize="Required All">
+			<Type Name="System.Collections.Generic.List`1[[System.Object,System.Private.CoreLib]]"  Dynamic="Required All" Serialize="Required All"/>
+			<Type Name="System.Array"  Dynamic="Required All" Serialize="Required All"/>
+		</Assembly>
+
+		<Assembly Name="BouncyCastle.Crypto" Dynamic="Required All" Serialize="Required All" > 
+			<Type Name="Org.BouncyCastle.Security.DigestUtilities+DigestAlgorithm[]" Dynamic="Required All" Serialize="Required All" />
+			<Type Name="Org.BouncyCastle.Security.CipherUtilities+CipherAlgorithm[]" Dynamic="Required All" Serialize="Required All" />
+			<Type Name="Org.BouncyCastle.Security.CipherUtilities+CipherMode[]" Dynamic="Required All" Serialize="Required All" />
+			<Type Name="Org.BouncyCastle.Security.CipherUtilities+CipherPadding[]" Dynamic="Required All" Serialize="Required All" />
+		</Assembly>
+		<Assembly Name="Microsoft.AspNetCore.Mvc.Core" Dynamic="Required All" Serialize="Required All">
+			<Type Name="Microsoft.Extensions.Internal.PropertyHelper">
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Object, System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Boolean,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Int32, System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Int32,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Int64, System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Int64,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Double, System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Double,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.DateTime,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.DateTime, System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Boolean, System.Runtime" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Collections.ObjectModel.ReadOnlyDictionary`2[[System.String,System.Runtime],[System.Boolean,System.Runtime]], System.Private.CoreLib" />
+				</Method>
+				<Method Name="CallNullSafePropertyGetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Collections.ObjectModel.ReadOnlyDictionary`2[[System.String,System.Runtime],[System.String,System.Runtime]], System.Private.CoreLib" />
+				</Method>
+
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Object, System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Boolean,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Int32, System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Int32,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Int64, System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Int64,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Double, System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.Double,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Nullable`1[[System.DateTime,System.Runtime]], System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.DateTime, System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Boolean, System.Runtime" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Collections.ObjectModel.ReadOnlyDictionary`2[[System.String,System.Runtime],[System.Boolean,System.Runtime]], System.Private.CoreLib" />
+				</Method>
+				<Method Name="CallPropertySetter" Dynamic="Required">
+					<GenericArgument Name="System.Object, System.Runtime" />
+					<GenericArgument Name="System.Collections.ObjectModel.ReadOnlyDictionary`2[[System.String,System.Runtime],[System.String,System.Runtime]], System.Private.CoreLib" />
+				</Method>
+			</Type>
+		</Assembly>
+
+	</Application>
+</Directives>
