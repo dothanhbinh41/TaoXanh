@@ -213,8 +213,8 @@ namespace TaoxanhProxy
             WriteToConsole("Tunnel to: " + hostname);
 
             var clientLocalIp = e.ClientLocalEndPoint.Address;
-            if (!clientLocalIp.Equals(IPAddress.Loopback) && !clientLocalIp.Equals(IPAddress.IPv6Loopback))
-                e.HttpClient.UpStreamEndPoint = new IPEndPoint(clientLocalIp, 0);
+            //if (!clientLocalIp.Equals(IPAddress.Loopback) && !clientLocalIp.Equals(IPAddress.IPv6Loopback))
+            //    e.HttpClient.UpStreamEndPoint = new IPEndPoint(clientLocalIp, 0);
             e.DecryptSsl = false;
         }
 
@@ -268,11 +268,11 @@ namespace TaoxanhProxy
             e.GetState().PipelineInfo.AppendLine(nameof(OnRequest) + ":" + e.HttpClient.Request.RequestUri);
 
             var clientLocalIp = e.ClientLocalEndPoint.Address;
-            if (!clientLocalIp.Equals(IPAddress.Loopback) && !clientLocalIp.Equals(IPAddress.IPv6Loopback))
-                e.HttpClient.UpStreamEndPoint = new IPEndPoint(clientLocalIp, 0);
+            //if (!clientLocalIp.Equals(IPAddress.Loopback) && !clientLocalIp.Equals(IPAddress.IPv6Loopback))
+            //    e.HttpClient.UpStreamEndPoint = new IPEndPoint(clientLocalIp, 0);
 
-            if (e.HttpClient.Request.Url.Contains("yahoo.com"))
-                e.CustomUpStreamProxy = new ExternalProxy("localhost", 8888);
+            //if (e.HttpClient.Request.Url.Contains("yahoo.com"))
+            //    e.CustomUpStreamProxy = new ExternalProxy("localhost", 8888);
 
             WriteToConsole("Active Client Connections:" + ((ProxyServer)sender).ClientConnectionCount);
             WriteToConsole(e.HttpClient.Request.Url);
