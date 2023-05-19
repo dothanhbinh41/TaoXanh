@@ -39,7 +39,6 @@ namespace TaoxanhProxy
             proxyServer = new ProxyServer();
 
             proxyServer.EnableHttp2 = true;
-            proxyServer.ServerCertificateValidationCallback += ProxyServer_ServerCertificateValidationCallback;
             // generate root certificate without storing it in file system
             proxyServer.CertificateManager.CreateRootCertificate(true);
             proxyServer.CertificateManager.TrustRootCertificate();
@@ -92,13 +91,15 @@ namespace TaoxanhProxy
 
         public void StartProxy(int port)
         {
+            proxyServer.ServerCertificateValidationCallback += ProxyServer_ServerCertificateValidationCallback;
+            proxyServer.BeforeUpStreamConnectRequest += ProxyServer_BeforeUpStreamConnectRequest;
             proxyServer.BeforeRequest += OnRequest;
             proxyServer.BeforeResponse += OnResponse;
             proxyServer.AfterResponse += OnAfterResponse;
             proxyServer.ServerCertificateValidationCallback += OnCertificateValidation;
             proxyServer.ClientCertificateSelectionCallback += OnCertificateSelection;
 
-            proxyServer.EnableWinAuth = true;
+          //  proxyServer.EnableWinAuth = true;
 
             explicitEndPoint = new ExplicitProxyEndPoint(IPAddress.Any, port, false)
             {
@@ -156,6 +157,11 @@ namespace TaoxanhProxy
             //proxyServer.SetAsSystemHttpProxy(explicitEndPoint);
             //proxyServer.SetAsSystemHttpsProxy(explicitEndPoint);
             if (RunTime.IsWindows) proxyServer.SetAsSystemProxy(explicitEndPoint, ProxyProtocolType.AllHttp);
+        }
+
+        private Task ProxyServer_BeforeUpStreamConnectRequest(object sender, ConnectRequest e)
+        {
+            WriteToConsole(e.BodyString);
         }
 
         public void Stop()
