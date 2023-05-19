@@ -162,6 +162,7 @@ namespace TaoxanhProxy
         private Task ProxyServer_BeforeUpStreamConnectRequest(object sender, ConnectRequest e)
         {
             WriteToConsole(e.BodyString);
+            return Task.CompletedTask;
         }
 
         public void Stop()
